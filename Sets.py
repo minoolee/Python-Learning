@@ -130,9 +130,14 @@ print("************25***********")
 # Set isdisjoint()
 # Return True if no items in set x is present in set y:
 bS1 = {"apple", "banana", "cherry"}
+bS2 = {"google", "microsoft", "facebook"}
+bS3 = bS1.isdisjoint(setBox2)
+print(bS3)
 print("************26***********")
-print("************27***********")
-print("************28***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
+# Set issuperset()
+# Return True if all items set y are present in set x:
+superSet1 = {"f", "e", "d", "c", "b", "a"}
+superSet2 = {"a", "b", "c"}
+superSeet3 = superSet1.issuperset(superSet2)
+print(superSeet3)
+
