@@ -27,7 +27,7 @@ print("************6***********")
 # print(setConstructor)
 print("************7***********")
 # Loops
-loopsSet = ("apple", "banana", "cherry")
+loopsSet = {"apple", "banana", "cherry"}
 for x in loopsSet:
     print(x)
 print("************8***********")

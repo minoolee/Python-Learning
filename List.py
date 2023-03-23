@@ -10,7 +10,7 @@ print("*********4*******")
 print(thisList[2:])
 print("*********5*******")
 if "apple" in thisList:
-    print("Yes, 'apple' is in the freuits list")
+    print("Yes, 'apple' is in the fruits list")
 print("********6********")
 # Change List Items
 thisList[5] = "blackcurrant"

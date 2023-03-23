@@ -18,7 +18,7 @@ print("************4***********")
 k = thisDict.keys()
 print(k)
 print("************5***********")
-# Add a new itthe original
+# Add a new item original
 thisDict["color"] = "White"
 print(thisDict)
 print("************6***********")
