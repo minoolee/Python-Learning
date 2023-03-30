@@ -9,7 +9,7 @@
 
 # Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which
 # you can get an iterator from.
-# All these objects have a iter() method which is used to get an iterator:
+# All these objects have an iter() method which is used to get an iterator:
 
 print("************1***********")
 mytuple = ("apple", "banana", "cherry")
@@ -38,15 +38,16 @@ print("************3***********")
 # but must always return the iterator object itself.
 # The __next__() method also allows you to do operations, and must return the next item in the sequence.
 
+
 class MyNumbers:
     def __iter__(self):
         self.a = 1
         return self
 
     def __next__(self):
-        x = self.a
+        y = self.a
         self.a += 1
-        return x
+        return y
 
 
 myClass = MyNumbers()
@@ -92,8 +93,8 @@ class Restaurant:
         self._menu = menu
 
     def __iter__(self):
-        for item in self._menu:
-            yield  item
+        for itemR in self._menu:
+            yield itemR
 
 
 r = Restaurant(['Pizza', 'Burger', 'Ice'])
@@ -101,6 +102,8 @@ for item in r:
     print(item)
 print("************6***********")
 # Ranger
+
+
 class FRange:
     def __init__(self, start=0.0, stop=0.0, step=1.0):
         self.start = start
@@ -119,15 +122,18 @@ class FRange:
         else:
             raise StopIteration
 
+
 fr = FRange(0, 2, 0.5)
 for x in fr:
     print(x)
 print("************7***********")
 # loop in loop
+
+
 class FRange2D:
     def __init__(self, start=0.0, stop=0.0, step=1.0, rows=5):
         self.rows = rows
-        self.fr = FRange(start,stop,step)
+        self.fr = FRange(start, stop, step)
 
     def __iter__(self):
         self.value = 0
@@ -140,26 +146,9 @@ class FRange2D:
         else:
             raise StopIteration
 
+
 fr = FRange2D(0, 2, 0.5, 4)
 for row in fr:
     for x in row:
         print(x, end=" ")
     print()
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************27***********")
-print("************28***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************27***********")
-print("************28***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
