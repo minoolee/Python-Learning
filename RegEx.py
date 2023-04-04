@@ -104,23 +104,43 @@ print("************6***********")
 # [a-zA-Z]     Returns a match for any character alphabetically between a and z, lower case OR upper case
 # [+] 	       In sets, +, *, ., |, (), $,{} has no special meaning, so [+] means: return a match for
 #              any + character in the string
-print("************16***********")
-print("************16***********")
-print("************27***********")
-print("************28***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
-print("************27***********")
-print("************28***********")
-print("************16***********")
-print("************16***********")
-print("************16***********")
+print("************7***********")
+# The findall() Function
+
+# The findall() function returns a list containing all matches.
+aiFin = re.findall("ai", txt)
+print(aiFin)
+print("************8***********")
+# The search() Function
+# The search() function searches the string for a match, and returns a Match object if there is a match.
+# If there is more than one match, only the first occurrence of the match will be returned:
+searchFunc = re.search("\s", txt)
+print("The first white-space character is located in position:", searchFunc.start())
+# If no matches are found, the value None is returned:
+print("************9***********")
+# The split() Function
+# The split() function returns a list where the string has been split at each match:
+splitFunc = re.split("\s", txt)
+print(splitFunc)
+print("************10***********")
+#  You can control the number of occurrences by specifying the maxsplit parameter:
+maxSplit = re.split("\s", txt, 1)
+print(maxSplit)
+print("************11***********")
+# The sub() Function
+# The sub() function replaces the matches with the text of your choice:
+replaceFunc = re.sub("\s", "14", txt)
+print(replaceFunc)
+print("************12***********")
+# You can control the number of replacements by specifying the count parameter:
+countReplace = re.sub("\s", "7", txt, 2)
+print(countReplace)
+print("************13***********")
+# The Match object has properties and methods used to retrieve information about the search, and the result:
+
+# .span() returns a tuple containing the start-, and end positions of the match.
+# .string returns the string passed into the function
+# .group() returns the part of the string where there was a match
+print("************14***********")
+groupFunc = re.search(r"\bS\w+", txt)
+print(groupFunc.group())
